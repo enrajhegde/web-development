@@ -12,6 +12,11 @@
     border-top-width: 5px;
     box-sizing: border-box;
 
+    /* overflow */
+    /* overflow: hidden; content outside the container will be hidden */
+
+    overflow: scroll;
+
 }
 
 .box2 {
