@@ -14,30 +14,37 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            overflow: auto;
+            /* flex-wrap: wrap; */
+            /* overflow: auto; */
+            gap: 10px;
         }
 
         .box {
             height: 200px;
             width: 200px;
-            margin: 10px;
+
             background-color: aquamarine;
 
+        }
+
+        .box1-cls {
+            /* order: 5; */
+        }
+
+        .box3 {
+            /* flex-shrink: 2; */
+            flex-grow: 2;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box">1 jsjkfjksfs jfsjkfs sjkfsjkf sfjsfjsf sfskjfsjkf ssjfjksfv</div>
+        <div class="box box1-cls">1</div>
         <div class="box">2</div>
-        <div class="box">sfskjfsjkf ssjfjksfv</div>
+        <div class="box box3">3</div>
         <div class="box">4</div>
-        <div class="box">sfskjfsjkf ssjfjksfv</div>
-        <div class="box">4</div>
-        <div class="box">sfskjfsjkf ssjfjksfv</div>
-        <div class="box">4</div>
+
 
     </div>
 
