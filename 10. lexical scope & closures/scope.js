@@ -31,14 +31,25 @@
 // }
 // fun()
 
-let val = "outsde fun"
-function fun() {
-    let val = "outside if"
-    if (true) {
-        let val = "inside if";
-        console.log(val)
+// let val = "outsde fun"
+// function fun() {
+//     let val = "outside if"
+//     if (true) {
+//         let val = "inside if";
+//         console.log(val)
+//     }
+//     console.log(val);
+// }
+// fun()
+// console.log(val);
+
+
+// CLOSURES::
+function grandMa() {
+    const secret = 'Maggi Masala'
+    function girl() {
+        console.log("i know the secret", secret)
     }
-    console.log(val);
+    girl()
 }
-fun()
-console.log(val);
+grandMa();
