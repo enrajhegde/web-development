@@ -7,7 +7,7 @@
 
 console.log(a);
 printHello();
-printAge();
+
 
 var a = 1;
 function printHello() {
@@ -17,4 +17,5 @@ function printHello() {
 let printAge = function () {
     console.log(20)
 }
+printAge();
 
