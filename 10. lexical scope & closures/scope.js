@@ -45,11 +45,29 @@
 
 
 // CLOSURES::
+// function grandMa() {
+//     const secret = 'Maggi Masala'
+//     function girl() {
+//         console.log("i know the secret", secret)
+//     }
+//     girl()
+// }
+// grandMa();
+
+// return function from closure
+
 function grandMa() {
+    console.log('grandMa fn called')
     const secret = 'Maggi Masala'
     function girl() {
         console.log("i know the secret", secret)
     }
-    girl()
+
+    return girl;
 }
-grandMa();
+
+const recipe = grandMa();
+// reciope variable is nothng but girl functuon,
+
+recipe()
+
