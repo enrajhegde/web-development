@@ -1,19 +1,19 @@
-// // callback function
-// function printName(fn1, fn2) {
-//     console.log("John Doe")
-//     console.log(fn1)
-//     console.log(fn2)
-// }
+// callback function
+function printName(fn1, fn2) {
+    console.log("John Doe")
+    console.log(fn1)
+    console.log(fn2)
+}
 
-// function printAge() {
-//     console.log(20)
-// }
+function printAge() {
+    console.log(20)
+}
 
-// function printProfession() {
-//     console.log("Student")
-// }
+function printProfession() {
+    console.log("Student")
+}
 
-// printName(printAge, printProfession)
+printName(printAge, printProfession)
 
 // impure function
 
