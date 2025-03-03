@@ -8,7 +8,6 @@ function placeOrder(drink) {
     })
 }
 
-
 function processOrder(orderPlaced) {
     return new Promise(function (resolve, reject) {
         resolve(`${orderPlaced} and served to customer!`)
@@ -22,29 +21,47 @@ function generateBill(processedOrder) {
 }
 
 
-placeOrder("coffee")
-    .then(function (orderStatus) {
-        console.log(orderStatus);
-        return orderStatus
-    })
-    .then(function (orderStatus) {
-        let isOrderProcessed = processOrder(orderStatus)
-        console.log(isOrderProcessed);
-        return isOrderProcessed
-    })
-    .then(function (orderIsProcessed) {
-        console.log(orderIsProcessed)
-        return orderIsProcessed
-    })
-    .then(function (orderIsProcessed) {
-        let isBillgenerated = generateBill(orderIsProcessed);
-        console.log(isBillgenerated)
-        return isBillgenerated
-    })
-    .then(function (billGenerated) {
-        console.log(billGenerated)
-    })
+// placeOrder("coffee")
+//     .then(function (orderStatus) {
+//         console.log(orderStatus);
+//         return orderStatus
+//     })
+//     .then(function (orderStatus) {
+//         let isOrderProcessed = processOrder(orderStatus)
+//         console.log(isOrderProcessed);
+//         return isOrderProcessed
+//     })
+//     .then(function (orderIsProcessed) {
+//         console.log(orderIsProcessed)
+//         return orderIsProcessed
+//     })
+//     .then(function (orderIsProcessed) {
+//         let isBillgenerated = generateBill(orderIsProcessed);
+//         console.log(isBillgenerated)
+//         return isBillgenerated
+//     })
+//     .then(function (billGenerated) {
+//         console.log(billGenerated)
+//     })
 
-    .catch(function (err) {
+//     .catch(function (err) {
+//         console.log(err)
+//     })
+
+// using async await.
+// wrap async await in try catch block.
+
+async function serveOrder() {
+    try {
+        // BLOCKED until placeorder() returns some value...
+        let orderStatus = await placeOrder('coffee')
+        let processedOrder = await processOrder(orderStatus)
+        let generatedBill = await generateBill(processedOrder)
+        console.log('thrid await', generatedBill)
+
+    } catch (err) {
         console.log(err)
-    })
+    }
+}
+serveOrder()
+
