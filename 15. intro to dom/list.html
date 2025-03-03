@@ -5,12 +5,22 @@
     <meta charset="UTF - 8">
     <meta name="viewport" content="width = device - width, initial - scale = 1.0">
     <title>Document</title>
+    <style>
+        .seven {
+            color: lightcoral;
+            font-size: 20px;
+        }
+
+        .one {
+            color: blue
+        }
+    </style>
 </head>
 
 <body>
     <li>11212</li>
     <ul id="target-ul">
-        <li>1</li>
+        <li class='one'>1</li>
         <li>2</li>
         <li>3</li>
         <li>4</li>
@@ -35,8 +45,21 @@
 
         let newSevenElement = document.createElement("li");
         newSevenElement.innerText = '7';
-        newSevenElement.style.color = "blue"
-        newSevenElement.style.backgroundColor = "yellow"
+
+        // add a class
+        newSevenElement.classList.add("seven")
+
+        // remove a class.
+        allItems[0].classList.remove('one')
+        // allItems[0].style.color = 'inherit';
+
+        // contains a class
+        if (newSevenElement.classList.contains('seven')) {
+            console.log("class is applied")
+        } else {
+            console.log("class not applied...")
+        }
+
 
         // insertBefore
         // SYNTAX: parentNode.insertBefore(newNode, referenceNode)
